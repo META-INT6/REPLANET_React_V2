@@ -60,19 +60,19 @@ const Signup = () => {
 
   const onCheckEmail = async (email) => {
     console.log(email);
-    try {
-      const response = await axios.post("http://localhost:8001/auth/emailcheck/{email}", email);
-      Swal.fire("사용 가능");
-      console.log(response.data);
-    } catch(error) {
-      console.log(error);
-      Swal.fire("사용 불가");
-  }
+    const url = "http://localhost:8001/auth/emailcheck/{email}/";
+    const checkTargetEmail = {email: email};
+    axios
+    .post(url, checkTargetEmail)
+    .then((res) => {
+      console.log(res.data.result);
+      if (res.data.result === false) {
+        setEmailMsg("사용 가능한 이메일입니다.");
+      } else {
+        setEmailMsg("이미 사용중인 이메일입니다.");
+      }
+    });
 };
-  
-
-
-
 
 
   const [emailMsg, setEmailMsg] = useState("");
@@ -99,6 +99,10 @@ const Signup = () => {
     } else {
       setEmailMsg("올바른 형식의 이메일입니다.")
     }
+
+
+
+
   });
 
 
