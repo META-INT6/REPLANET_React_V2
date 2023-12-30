@@ -8,7 +8,8 @@ function CountBox() {
   const dispatch = useDispatch();
 
   const participationList = participation? participation.results?.todayDonation : '';
-  let totalDonation = parseInt(participationList? participationList[0].totalDonation: "0").toLocaleString('ko-KR');
+  console.log("뭐가 없어/ : ", participationList);
+  let totalDonation = parseInt(participationList[0]? participationList[0].totalDonation: "0").toLocaleString('ko-KR');
 
   useEffect(
     () => {
@@ -27,7 +28,7 @@ function CountBox() {
       <>
         <div style={{ marginTop: 100 }}>
           <div className="campaign-banner">
-            <h3>{today} 하루,<br/>{participationList ? participationList[0].donationCount : "0"}명의 사람들이 {totalDonation? totalDonation:""} 원만큼 모았어요! </h3>
+           <h3>{today} 하루,<br/>{participationList[0] ? participationList[0].donationCount : "0"}명의 사람들이 {totalDonation? totalDonation:""} 원만큼 모았어요! </h3>
           </div>
         </div>
         

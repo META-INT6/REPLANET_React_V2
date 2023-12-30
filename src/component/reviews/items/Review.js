@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-//import { stylesheet } from "../../../assets/css/common.css"
 
 export function Review({ review, reviewExists }) {
   const currentDate = new Date();
@@ -28,7 +27,7 @@ export function Review({ review, reviewExists }) {
             {memberUI ? 
             <NavLink to={`/campaign/${review.campaignCode}`}>
               <h4><span style={{color: "#706f6f", fontSize: 15+"px"}}>캠페인명 </span><br/>{review.campaignTitle}</h4>
-            <h4><span style={{color: "#706f6f", fontSize: 15+"px"}}>재단명</span><br />{review.organization.member.memberName}</h4>
+              <h4><span style={{color: "#706f6f", fontSize: 15+"px"}}>재단명</span><br />{review.organization.member.memberName}</h4>
             </NavLink>
             :
             <>
