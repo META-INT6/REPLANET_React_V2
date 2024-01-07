@@ -45,7 +45,7 @@ $ cd REPLANET_React_V2
 
 ## Environment 🐈
 
-<img width="600" src=".github/images/replanet_development.png"/>
+<img width="600" src=".github/images/"/>
 
 ---
 ## 화면 구성 📺
