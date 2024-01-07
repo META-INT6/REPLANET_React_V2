@@ -37,12 +37,15 @@ $ git clone https://github.com/META-INT6/REPLANET_React_V2.git
 $ cd REPLANET_React_V2
 ```
 
+### BackEnd
+⇨ [REPLANET_RestAPI_V2](https://github.com/META-INT6/REPLANET_RestAPI_V2.git)
+
 
 ---
 
 ## Environment 🐈
 
-<img width="600" src=".github/images/replanet_development.png"/>
+<img width="600" src=".github/images/replanet_develop.png"/>
 
 ---
 ## 화면 구성 📺
